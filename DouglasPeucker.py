@@ -204,12 +204,12 @@ def outputResult(fileName,isId):
         get_data[i].id=i
         
     #将get_data按原格式写入文件，or获取id，从gnss_data写入
-    #去除row，yaw，pitch，加速度
+    #去除row，pitch，加速度
     output=open(fileName.replace('.txt','')+'.after.txt','w')
     for item in get_data:
         #item_dict=item.__dict__
         line=''
-        line=str(item.id)+' '+str(item.timestamp)+' '+str(item.lon)+' '+str(item.lat)+' '+str(item.x)+' '+str(item.y)+' '+str(item.hgt)+'\n'
+        line=str(item.id)+' '+str(item.timestamp)+' '+str(item.lon)+' '+str(item.lat)+' '+str(item.x)+' '+str(item.y)+' '+str(item.hgt)+' '+str(item.yaw)+'\n'
         '''
         for word in item_dict:
             line=line+str(item_dict[word])+' '

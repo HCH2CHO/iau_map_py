@@ -50,9 +50,9 @@ if __name__=="__main__":
     #计算方法：floor(x-x_min)+ceil(y-y_min)*x_index_num
     after_lane_np=after_lane.values
     index_row=np.floor((after_lane_np[:,4]-x_min)/10)+np.ceil((after_lane_np[:,5]-y_min)/10)*x_index_num
-    after_lane[7]=index_row
+    after_lane[8]=index_row
     #检索
-    current_gird=after_lane[after_lane[7]==32].copy()
+    current_gird=after_lane[after_lane[8]==32].copy()
         
     #传入坐标点position
     #x=position.x
@@ -61,8 +61,8 @@ if __name__=="__main__":
     x=after_lane.loc[0,4]
     y=after_lane.loc[0,5]
     
-    current_gird[8]=((current_gird[4]-x)**2+(current_gird[5]-y)**2)**0.5
-    current_point_id=current_gird[8].idxmin()
+    current_gird[9]=((current_gird[4]-x)**2+(current_gird[5]-y)**2)**0.5
+    current_point_id=current_gird[9].idxmin()
     
     if(current_point_id-10>=0):
         min_point_id=current_point_id-10
@@ -73,8 +73,3 @@ if __name__=="__main__":
     else:
         max_point_id=lane_path.shape[0]
         
-        
-    
-    
-    
-    

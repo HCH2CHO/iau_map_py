@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
+'''
 Created on Fri Nov 15 08:38:43 2019
 
 @author: HCHO
-"""
+'''
 
 import math
 import networkx as nx

@@ -1,0 +1,8 @@
+B样条曲线和贝塞尔曲线
+
+利用三次样条曲线拟合车辆轨迹
+
+羊角螺线
+
+C:\Octave\share\octave\4.4.1\m\polynomial\spline
+C:\Octave\share\octave\4.4.1\m\polynomial\splinefit
